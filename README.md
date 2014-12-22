@@ -27,20 +27,15 @@ You should also have the following installed:
 #Example
 
 ##1. Getting started
-Let's begin by [scaffolding](http://docs.strongloop.com/pages/viewpage.action?pageId=3836281) the application:
+Scaffold a new application by running `slc loopback loopback-example-relations-basic`. You should see:
 
-```shell
-slc loopback
+```
+? What's the name of your application? (loopback-example-relations-basic)
 ```
 
-You should see:
-
-```shell
-...
-[?] Enter a directory name where to create the project: (.)
-```
-
-Enter `loopback-example-relations-basic` as the project name (we'll refer to the generated directory as the *project root* from hereon). Finish the creation process by following the prompts.
+Press <enter> to accept the name. Once the project has finished scaffolding, you
+should see a generated dir named `loopback-example-relations-basic`. `cd` into
+this dir (which we'll refer to as the *project root* from hereon).
 
 ##2. Create the models
 We will be using an in-memory database to hold our data. [Create a model](http://docs.strongloop.com/display/LB/Creating+models) named `Customer` by running:
@@ -91,7 +86,7 @@ Follow the prompts to finish creating the model. Repeat for `Review` and `Order`
 ##3. Create the front-end
 Let's create a front-end to make it easier to analyze our data.
 
-###Install EJS by running
+###Install EJS
 From the project root, run `npm install --save ejs`.
 
 ###Serve `index.html`

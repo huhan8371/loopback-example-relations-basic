@@ -96,7 +96,7 @@ Modify [`server/server.js`](https://github.com/strongloop/loopback-example-relat
 From the project root, run `mkdir -p server/views`.
 
 ###Create `index.html`
-Inside the `views` directory, create [`index.html`](https://github.com/strongloop/loopback-example-relations-basic/blob/master/server/views/index.html).
+Inside the [`views` directory](https://github.com/strongloop/loopback-example-relations-basic/tree/master/server/views), create [`index.html`](https://github.com/strongloop/loopback-example-relations-basic/blob/master/server/views/index.html).
 
 You can view what we have so far by executing `slc run server` from the project root and browsing to [localhost:3000](http://localhost:3000). Click on [API Explorer](http://localhost:3000/explorer) and you will notice that the models we created from [step 2](#2-create-the-models) are there.
 

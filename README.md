@@ -1,7 +1,5 @@
 #LoopBack model relations example app
-The purpose of this example is to demonstrate model relations in [LoopBack](http://loopback.io).
 
-#Contents
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)
 - [Example](#example)
@@ -14,7 +12,7 @@ The purpose of this example is to demonstrate model relations in [LoopBack](http
   - [Conclusion](#7-conclusion)
 
 #Overview
-We will create a web application to demonstrate model relations. The main page will consist of various links that allow us to query and filter data through an exposed REST API.
+The purpose of this example is to demonstrate model relations in [LoopBack](http://loopback.io). We will create a web application to demonstrate model relations. The main page will consist of various links that allow us to query and filter data through an exposed REST API.
 
 #Prerequisites
 This guide assumes you have working knowledge of:

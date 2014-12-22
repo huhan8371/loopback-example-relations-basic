@@ -97,29 +97,8 @@ Let's create a front-end to make it easier to analyze our data. To install [EJS]
 npm install --save ejs
 ```
 
-Then configure the application [view engine](http://expressjs.com/api) by modifying `server/server.js` to look like:
-
-```node
-...
-// -- Mount static files here--
-...
-app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
-app.set('json spaces', 2); //pretty print results for easier viewing later
-...
-```
-
-Next, modify `server/boot/root.js` to look like:
-
-```node
-module.exports = function(server) {
-  var router = server.loopback.Router();
-  router.get('/', function(req, res) {
-    res.render('index');
-  });
-  server.use(router);
-};
-```
+Then configure the application [view engine](http://expressjs.com/api) by [modifying `server/server.js`](Then configure the application [view engine](http://expressjs.com/api) by modifying `server/server.js`
+).
 
 Finally, create the `views` directory by running:
 

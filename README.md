@@ -1,4 +1,4 @@
-#LoopBack model relations example app
+#loopback-example-relations-basic
 
 - [Overview](#overview)
 - [Prerequisites](#prerequisites)

@@ -97,8 +97,7 @@ Let's create a front-end to make it easier to analyze our data. To install [EJS]
 npm install --save ejs
 ```
 
-Then configure the application [view engine](http://expressjs.com/api) by [modifying `server/server.js`](Then configure the application [view engine](http://expressjs.com/api) by modifying `server/server.js`
-).
+Then configure the application [view engine](http://expressjs.com/api) by [modifying `server/server.js`](Then configure the application [view engine](http://expressjs.com/api) by modifying `server/server.js`).
 
 Finally, create the `views` directory by running:
 

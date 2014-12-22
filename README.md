@@ -91,50 +91,19 @@ Follow the prompts to finish creating the model. Repeat for `Review` and `Order`
 > You should see `customer.json`, `order.json` and `review.json` in `common/models` when you're done.
 
 ##3. Create the front-end
-Let's create a front-end to make it easier to analyze our data. To install [EJS](http://embeddedjs.com/), run the following from the project root:
+Let's create a front-end to make it easier to analyze our data.
 
-```shell
-npm install --save ejs
-```
+###Install EJS by running
+From the project root, run `npm install --save ejs`.
 
-Then configure the application [view engine](http://expressjs.com/api) by [modifying `server/server.js`](Then configure the application [view engine](http://expressjs.com/api) by modifying `server/server.js`).
+###Serve `index.html`
+Modify [`server/server.js`](https://github.com/strongloop/loopback-example-relations-basic/blob/master/server/server.js#L11-L14)
 
-Finally, create the `views` directory by running:
+###Create the `views` dir
+From the project root, run `mkdir -p server/views`.
 
-```shell
-mkdir -p server/views
-```
-
-Inside the `views` directory, create `index.html` with the following contents:
-
-```html
-<DOCTYPE html>
-<html>
-  <head>
-    <title>loopback-example-relation</title>
-  </head>
-  <body>
-    <h1>loopback-example-relation</h1>
-    <p>
-      <a href="/explorer">API Explorer</a>
-    </p>
-    <h2>API</h2>
-    <ul>
-      <li><a href='/api/customers'>/api/customers</a>
-      <li><a href='/api/customers?filter[fields][name]=true'>/api/customers?filter[fields][name]=true</a>
-      <li><a href='/api/customers/1'>/api/customers/1</a>
-      <li><a href='/api/customers/youngFolks'>/api/customers/youngFolks</a>
-      <li><a href='/api/customers/1/reviews'>/api/customers/1/reviews</a>
-      <li><a href='/api/customers/1/orders'>/api/customers/1/orders</a>
-      <li><a href='/api/customers?filter[include]=reviews'>/api/customers?filter[include]=reviews</a>
-      <li><a href='/api/customers?filter[include][reviews]=author'>/api/customers?filter[include][reviews]=author</a>
-      <li><a href='/api/customers?filter[include][reviews]=author&filter[where][age]=21'>/api/customers?filter[include][reviews]=author&filter[where][age]=21</a>
-      <li><a href='/api/customers?filter[include][reviews]=author&filter[limit]=2'>/api/customers?filter[include][reviews]=author&filter[limit]=2</a>
-      <li><a href='/api/customers?filter[include]=reviews&filter[include]=orders'>/api/customers?filter[include]=reviews&filter[include]=orders</a>
-    </ul>
-  </body>
-</html>
-```
+###Create `index.html`
+Inside the `views` directory, create [`index.html`](https://github.com/strongloop/loopback-example-relations-basic/blob/master/server/views/index.html).
 
 You can view what we have so far by executing `slc run server` from the project root and browsing to [localhost:3000](http://localhost:3000). Click on [API Explorer](http://localhost:3000/explorer) and you will notice that the models we created from [step 2](#2-create-the-models) are there.
 

@@ -90,7 +90,7 @@ Let's create a front-end to make it easier to analyze our data.
 From the project root, run `npm install --save ejs`.
 
 ###Serve `index.html`
-Modify [`server/server.js`](https://github.com/strongloop/loopback-example-relations-basic/blob/master/server/server.js#L11-L14)
+Modify [`server/server.js`](https://github.com/strongloop/loopback-example-relations-basic/blob/master/server/server.js#L11-L14) to serve `index.html`.
 
 ###Create the `views` dir
 From the project root, run `mkdir -p server/views`.

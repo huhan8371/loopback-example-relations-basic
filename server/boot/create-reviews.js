@@ -18,7 +18,6 @@ module.exports = function(server) {
         count--;
         if (count === 0) {
           console.log('done');
-          dataSource.disconnect();
         }
       });
     });

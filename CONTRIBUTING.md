@@ -1,9 +1,9 @@
 ### Contributing ###
 
-Thank you for your interest in `loopback-example-relation`, an open source project
+Thank you for your interest in `loopback-example-relations-basic`, an open source project
 administered by StrongLoop.
 
-Contributing to `loopback-example-relation` is easy. In a few simple steps:
+Contributing to `loopback-example-relations-basic` is easy. In a few simple steps:
 
   * Ensure that your effort is aligned with the project's roadmap by
     talking to the maintainers, especially if you are going to spend a
@@ -14,7 +14,7 @@ Contributing to `loopback-example-relation` is easy. In a few simple steps:
   * Adhere to code style outlined in the [Google C++ Style Guide][] and
     [Google Javascript Style Guide][].
 
-  * Sign the [Contributor License Agreement](https://cla.strongloop.com/strongloop/loopback-example-relation)
+  * Sign the [Contributor License Agreement](https://cla.strongloop.com/agreements/strongloop/loopback-example-relations-basic)
 
   * Submit a pull request through Github.
 

@@ -103,42 +103,14 @@ You can view what we have so far by executing `slc run server` from the project 
 > You may also notice some of the API endpoints return empty arrays or errors. It's because the database is empty. In addition, we need to define model relations for some of the API endpoints to work. Don't fret, we'll get to all that very soon!
 
 ##4. Add sample data
-In `server/boot`, create a script named `create-customers.js` with the following contents:
+In `server/boot`, create the following boot scripts:
 
-```node
-var customers = [
-  {name: 'Customer A', age: 21},
-  {name: 'Customer B', age: 22},
-  {name: 'Customer C', age: 23},
-  {name: 'Customer D', age: 24},
-  {name: 'Customer E', age: 25}
-];
+- [`create-customers.js`](server/boot/create-customers.js)
+- [`create-reviews.js`](server/boot/create-reviews.js)
+- [`create-orders.js`](server/boot/create-orders.js)
 
-module.exports = function(server) {
-  var dataSource = server.dataSources.db;
-  dataSource.automigrate('customer', function(er) {
-    if (er) throw er;
-    var Model = server.models.Customer;
-    //create sample data
-    var count = customers.length;
-    customers.forEach(function(customer) {
-      Model.create(customer, function(er, result) {
-        if (er) return;
-        console.log('Record created:', result);
-        count--;
-        if (count === 0) {
-          console.log('done');
-          dataSource.disconnect();
-        }
-      });
-    });
-    //define a custom scope
-    Model.scope('youngFolks', {where: {age: {lte: 22 }}});
-  });
-};
-```
-
-Create two more scripts, [create-reviews.js](server/boot/create-reviews.js) and [create-orders.js](server/boot/create-orders.js) in `server/boot`. This sample data will be automatically loaded when you start the application.
+Each script will be run upon application startup and will load the its
+corresponding sample data.
 
 > `automigrate()` recreates the database table/index if it already exists. In other words, existing tables will be dropped and ALL EXISTING DATA WILL BE LOST. For more information, see the [documentation](http://apidocs.strongloop.com/loopback-datasource-juggler/#datasourceautomigratemodel-callback).
 

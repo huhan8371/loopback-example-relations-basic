@@ -1,3 +1,9 @@
+#THIS EXAMPLE IS DEPRECATED
+
+An updated version is available at [loopback-example-model-relations](https://github.com/strongloop/loopback-example-model-relations)
+
+---
+
 #loopback-example-relations-basic
 
 - [Overview](#overview)
